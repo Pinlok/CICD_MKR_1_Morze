@@ -6,3 +6,6 @@ with open('file1.txt', 'r') as file1, open('file2.txt', 'r') as file2, open('sam
     same_lines = set(file1_lines) & set(file2_lines)
     for line in same_lines:
         same_file.write(line)
+        diff_lines = set(file1_lines) ^ set(file2_lines)
+        for line in diff_lines:
+            diff_file.write(line)
