@@ -1,6 +1,4 @@
-def compare_files(file1, file2):
-
-    with open(file1, 'r') as f1:
-        lines1 = set(f1.readlines())
-    with open(file2, 'r') as f2:
-        lines2 = set(f2.readlines())
+with open('file1.txt', 'r') as file1, open('file2.txt', 'r') as file2, open('same.txt', 'w') as same_file, open('diff.txt', 'w') as diff_file:
+    # Read the contents of the two files into lists
+    file1_lines = file1.readlines()
+    file2_lines = file2.readlines()
